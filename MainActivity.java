@@ -7,61 +7,65 @@ import android.widget.Toast;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "myLogs";
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        makeToast("onCreate");
+        makeInfo("onCreate");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        makeToast("OnStart");
+        makeInfo("OnStart");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        makeToast("OnResume");
+        makeInfo("OnResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        makeToast("OnPause");
+        makeInfo("OnPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        makeToast("OnStop");
+        makeInfo("OnStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        makeToast("onDestroy");
+        makeInfo("onDestroy");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        makeToast("onRestoreInstanceState");
+        makeInfo("onRestoreInstanceState");
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        makeToast("onSaveInstanceState");
+        makeInfo("onSaveInstanceState");
     }
 
-    private void makeToast(String text)
+    private void makeInfo(String text)
     {
+
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_SHORT).show();
-        Log.d(TAG,"text");
+        //Выводим в logCat каждый LifeCycle
+        Log.d(TAG,text);
 
     }
 }
