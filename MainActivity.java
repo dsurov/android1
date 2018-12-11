@@ -1,24 +1,27 @@
 package ru.geekbrains.android1.homework2.homework22;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.util.Log;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    // получаем экземпляр элемента ListView
-    //ListView listView = (ListView)findViewById(R.id.listView);
-    //String[] catNames = getResources().getStringArray(R.array.cat_names);
+
+    String[] citys;
+
 
 
     @Override
@@ -28,7 +31,33 @@ public class MainActivity extends AppCompatActivity {
         makeInfo("onCreate");
         greeting_user();
 
-    }
+        ListView lView = (ListView) findViewById(R.id.lview);
+        citys = getResources().getStringArray(R.array.city_list);
+
+        // создаем arrаy-адаптер
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, citys);
+
+        // присваиваем адаптер списку
+        lView.setAdapter(adapter);
+
+        lView.setOnItemClickListener(new OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1,
+                                    int pos, long id
+            ) {
+
+                Toast toast = Toast.makeText(
+                        getApplicationContext(), citys[pos], Toast.LENGTH_SHORT
+                );
+                toast.show();
+            }
+
+        });
+        }
+
+
 
     @Override
     protected void onStart() {
