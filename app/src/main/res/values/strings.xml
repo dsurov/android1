@@ -3,14 +3,23 @@
     <string name="greeting1">Доброе утро</string>
     <string name="greeting2">Добрый день</string>
     <string name="greeting3">Добрый вечер</string>
+    <string name="greeting4">Привет</string>
+    <string name="greeting5">Доброй ночи</string>
+    <string name="greeting6">Доброго времени суток</string>
     <string name="weather_attr1">Скорость ветра</string>
     <string name="weather_attr2">Давление</string>
     <string name="weather_attr3">Влажность</string>
-    <string name="weather_attr4">*Для просмотра погоды выберите город из списка*</string>
+    <string name="weather_attr4">**Для просмотра погоды выберите город из списка, укажите необходимы параметры и нажмите "ок"**</string>
     <string name="weather_attr5">25</string>
     <string name="weather_attr6">10 м/c</string>
     <string name="weather_attr7">680</string>
-    <string name="city1">Ростов-на-Дону</string>
+    <string name="weather_attr8">75%</string>
+    <string name="weather_attr9">Температура</string>
+    <string name="city1">Город</string>
+    <string name="change_city_button">Выбрать</string>
+    <string name="exit_button">Выход</string>
+    <string name="ok_button">ОК</string>
+    <string name="back_button">НАЗАД</string>
 
     <string-array name="city_list">
         <item>Ростов-на-Дону</item>
@@ -26,5 +35,8 @@
         <item>Самара</item>
         <item>Саратов</item>
         <item>Новосибирск</item>
+        <item>Челябинск</item>
+        <item>Сочи</item>
+        <item>Армавир</item>
     </string-array>
 </resources>
