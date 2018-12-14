@@ -15,7 +15,6 @@ public class Activity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
         Content();
-
     }
 
     private void Content()
