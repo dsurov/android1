@@ -164,7 +164,6 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/ok_button" />
-
             <Button
                 android:id="@+id/exit_button"
                 android:layout_width="wrap_content"
