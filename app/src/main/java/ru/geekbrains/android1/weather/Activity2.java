@@ -38,6 +38,7 @@ public class Activity2 extends AppCompatActivity {
             LL4.setVisibility(View.VISIBLE);
         }
 
+        //кнопка НАЗАД
         Button btnBack = (Button) findViewById(R.id.back_button);
         btnBack.setOnClickListener(new View.OnClickListener() {
 
